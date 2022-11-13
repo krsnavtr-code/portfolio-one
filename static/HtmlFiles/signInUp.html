@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/CSSFiles/signInUp.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Login</span>
+                <form action="#" method="get">
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your email" required />
+                        <i class="fa-solid fa-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Enter your password" required />
+                        <i class="fa-solid fa-lock icon"></i>
+                        <i class="fa-solid fa-eye-slash showHidePw"></i>
+                    </div>
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck" />
+                            <label for="logCheck" class="text">Remember me</label>
+                        </div>
+                        <a href="#" class="text">Forgot password</a>
+                    </div>
+                    <div class="input-field button">
+                        <input type="button" value="Login Now" />
+                    </div>
+                </form>
+                <div class="login-signup">
+                    <span class="text">Not a member?</span>
+                    <a href="#" class="text signup-link">Signup Now</a>
+                </div>
+            </div>
+
+            <!-- Registration Form -->
+            <div class="form signup">
+                <span class="title">Registration</span>
+                <form action="#" method="get">
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your name" required />
+                        <i class="fa-solid fa-user icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your email" required />
+                        <i class="fa-solid fa-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Create a password" required />
+                        <i class="fa-solid fa-lock icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Confirm a password" required />
+                        <i class="fa-solid fa-lock icon"></i>
+                        <i class="fa-solid fa-eye-slash showHidePw"></i>
+                    </div>
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="sigCheck" />
+                            <label for="sigCheck" class="text">Remember me</label>
+                        </div>
+                        <a href="#" class="text">Forgot password</a>
+                    </div>
+                    <div class="input-field button">
+                        <input type="button" value="Login Now" />
+                    </div>
+                </form>
+                <div class="login-signup">
+                    <span class="text">text Not a member?</span>
+                    <a href="#" class="text login-link">Signup now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/static/JsFiles/signInUp.js"></script>
+<script src="https://kit.fontawesome.com/5d55eea1c5.js" crossorigin="anonymous"></script>
+
+</html>

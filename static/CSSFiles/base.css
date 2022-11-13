@@ -1,0 +1,241 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600&family=Poppins:wght@200;300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(255, 255, 255);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#novbar {
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+}
+#nav-top {
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+    height: 50px;
+    width: 100%;
+    background: #4070f4;
+}
+#nav-left{
+    width: max-content;
+}
+#nav-left ul li {
+    display: flex;
+    justify-content: space-between;
+}
+#nav-left ul li a i{
+    color: white;
+    padding: 5px;
+    font-size: 1.2rem;
+}
+#nav-left ul li a i:hover{
+    color: rgb(43, 255, 0);
+}
+.search{
+    float:right;
+    margin:7px;
+}
+.search form {
+    border-radius: 15px;
+}
+.search form input[type=text]{
+    width: 20vw;
+    height: 2vw;
+    border-radius: 25px;
+    border: black;
+    background: #ffffff;
+    padding: 0 0 0 15px;
+    color: rgb(0, 0, 0);
+    font-size: 1.2rem;
+}
+.search-button{
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+    border: black;
+    background: #ffffff;
+    color: #000000;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact i {
+    color: rgb(0, 0, 0);
+    font-size: 1.1rem;
+    margin: auto 3px;
+}
+.contact strong a:hover {
+    /* font-weight: bolder; */
+    /* font-style: italic; */
+    color: #e8e8e8;
+}
+.contact strong {
+    margin-right: 15px;
+}
+.contact strong a {
+    color: aliceblue;
+    text-decoration: none;
+}
+.contact-small strong a i {
+    font-size: 1.3rem;
+    color: #f2f2f2;
+    margin: auto 10px;
+    padding: 5px;
+}
+.contact-small strong a i:hover {
+    color: rgb(43, 255, 0);
+}
+
+
+/* This is for navbar bootom */
+nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    min-height: 6vh;
+    background: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    /* margin-top: -1px; */
+}
+.logo {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 25px;
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo .logo-image {
+    width: 45px;
+    border-radius: 7px;
+    margin: 0 5px;
+}
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 38vw;
+}
+.nav-links li {
+    /* width: 5vh; */
+}
+.nav-links li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: auto 10px;
+    width: 6.66%;
+}
+.nav-links li a:hover {
+    font-weight: bold;
+    /* font-size: 0.95rem; */
+    text-shadow: 1px 0px 0px #000000;
+    color: #46464664;
+}
+nav h4 {
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+}
+nav h4 a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+nav h4 a:hover {
+    text-decoration: underline;
+    color: #4070f4;
+    /* font-size: 0.9rem; */
+}
+
+@media screen and (max-width:1283px) {
+    .nav-links {
+        width: 45vw;
+    }
+}
+@media screen and (max-width:1000px) {
+    .nav-links {
+        width: 55vw;
+    }
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+.burger div {
+    width: 25px;
+    height: 5px;
+    background: white;
+    margin: 5px;
+    border-radius: 2px;
+}
+@media screen and (max-width:768px) {
+    body {
+        overflow: hidden;
+    }
+    nav {
+        background: rgb(255, 255, 255);
+    }
+    .nav-links {
+        margin: 0 10px;
+        position: absolute;
+        right: 0px;
+        height: 52vh;
+        width: 30%;
+        top: 7vh;
+        background: #643d4d;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0 50px 0;
+        transform: translateX(110%);
+        transition: transform 0.5s ease-in;
+        border-radius: 3px;
+    }
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+    }
+}
+.nav-active {
+    transform: translateX(0%);
+}
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.toggle .line1 {
+    transform: rotate(45deg) translate(5px, -6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
