@@ -1,16 +1,15 @@
-const nav = document.querySelector(".navbar");
-fetch('/static/HtmlFiles/base.html')
+const navTop = document.querySelector(".navbar-top");
+fetch('/static/HtmlFiles/nav-top.html')
 .then(res=>res.text())
 .then(data=>{
-    nav.innerHTML=data
+    navTop.innerHTML=data
 });
-// const footer = document.querySelector(".footer-");
-// fetch('/static/HtmlFiles/footer.html')
-// .then(res=>res.text())
-// .then(data=>{
-//     footer.innerHTML=data
-// });
-
+const navBottom = document.querySelector(".navbar-bottom");
+fetch('/static/HtmlFiles/nav-bottom.html')
+.then(res=>res.text())
+.then(data=>{
+    navBottom.innerHTML=data
+});
 
 // Repeat a Corse Section
 let corseSection = document.querySelector('#corse-section');
